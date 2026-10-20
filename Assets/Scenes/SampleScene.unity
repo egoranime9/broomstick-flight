@@ -671,40 +671,94 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126855092}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe219ac7c943474aba53b5a80d706456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputMode: 0
-  leftHand: {fileID: 1470330740}
-  rightHand: {fileID: 1470330739}
+  rig: {fileID: 1470330735}
   head: {fileID: 1470330734}
-  throttleAction:
-    m_UseReference: 1
+  seatBelowEyes: 0.7
+  seatBehindMiddle: 0.25
+  mountDuration: 0.45
+  mountLift: 0.6
+  topSpeed: 16
+  accelerationRate: 7
+  coastDeceleration: 2
+  brakeDeceleration: 16
+  climbSpeed: 5
+  landingSpeed: 4
+  steerSharpness: 2.5
+  snapTurnDegrees: 45
+  maxHeightAboveGround: 250
+  worldEdgeMargin: 15
+  maxVisualPitch: 25
+  maxVisualBank: 20
+  throttleInput:
+    m_UseReference: 0
     m_Action:
       m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 5e3a3772-d6a6-4f4d-bd1e-2164bbb50c40
+      m_Id: 1523f428-d234-4ce1-9c7a-3d5b45ba1870
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
       m_Priority: 0
-    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  cruiseSpeed: 12
-  boostSpeed: 28
-  acceleration: 6
-  pitchRate: 45
-  yawRate: 60
-  visualBank: 35
-  inputSmoothing: 5
-  maxPitch: 60
-  minAltitude: 1.5
-  maxAltitude: 300
-  handFullDeflection: 35
-  handDeadZone: 5
+    m_Reference: {fileID: 0}
+  brakeInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6c4794a1-607c-45ea-9561-6f77296532fe
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Reference: {fileID: 0}
+  steerStick:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 1c488dcc-5a56-43e0-bbf6-5311e454de92
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Reference: {fileID: 0}
+  leftGripInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9ca66ceb-ff3c-4bae-b8c3-584eeee4aee3
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Reference: {fileID: 0}
+  rightGripInput:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6bd06f9a-55e7-48bf-bf13-4274857c99a3
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &786579304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,6 +1179,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 1470330733}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1470330735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1178791450436251564, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1470330733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1470330736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}

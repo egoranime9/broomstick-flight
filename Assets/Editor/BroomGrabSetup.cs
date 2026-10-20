@@ -75,13 +75,7 @@ public static class BroomGrabSetup
             return;
         }
 
-        // 1. Полёт пока выключаем
-        var flight = broom.GetComponent<BroomController>();
-        if (flight != null)
-        {
-            Undo.RecordObject(flight, "Disable flight");
-            flight.enabled = false;
-        }
+        // 1. Полёт включает Broom → Setup Flight (BroomController сам ждёт, пока метлу возьмут двумя руками)
 
         // 2. Риг — отдельно, на земле
         Undo.SetTransformParent(rig.transform, null, "Unparent XR Origin");

@@ -119,11 +119,8 @@ public static class BroomVRSetup
         if (controller != null)
         {
             var so = new SerializedObject(controller);
+            // Кнопки полёта BroomController находит сам (Broom → Setup Flight)
             so.FindProperty("head").objectReferenceValue = rigCameraTransform;
-            so.FindProperty("leftHand").objectReferenceValue = FindDeep(rig.transform, "Left Controller");
-            so.FindProperty("rightHand").objectReferenceValue = FindDeep(rig.transform, "Right Controller");
-            so.FindProperty("throttleAction.m_UseReference").boolValue = true;
-            so.FindProperty("throttleAction.m_Reference").objectReferenceValue = Ref("XRI Right Interaction/Activate Value");
             so.ApplyModifiedProperties();
         }
 

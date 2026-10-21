@@ -251,6 +251,56 @@ Transform:
   - {fileID: 54413471}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &293021353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 293021354}
+  - component: {fileID: 293021355}
+  m_Layer: 0
+  m_Name: Ring 09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &293021354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293021353}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.03381319, y: -0.18211344, z: 0.006266394, w: 0.982676}
+  m_LocalPosition: {x: 145.51357, y: 25.612574, z: 250.44592}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293021355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293021353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u041E\u0442\u043F\u0443\u0441\u0442\u0438 \u0433\u0430\u0437 \u2014 \u043C\u0435\u0442\u043B\u0430 \u0441\u0430\u043C\u0430 \u043F\u043B\u0430\u0432\u043D\u043E \u0441\u0431\u0430\u0432\u0438\u0442 \u0445\u043E\u0434"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +592,156 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &521047564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521047565}
+  - component: {fileID: 521047566}
+  m_Layer: 0
+  m_Name: Ring 03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &521047565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521047564}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.10759721, y: 0.3070468, z: 0.034962196, w: 0.94494593}
+  m_LocalPosition: {x: 24.905779, y: 15.825701, z: 92.90092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521047566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521047564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u0427\u0442\u043E\u0431\u044B \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u044C, \u043F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u0432\u0435\u0440\u043D\u0438 \u0433\u043E\u043B\u043E\u0432\u0443"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
+--- !u!1 &539955067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539955068}
+  - component: {fileID: 539955069}
+  m_Layer: 0
+  m_Name: Ring 07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539955068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539955067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.028179962, y: 0.2333615, z: -0.006765846, w: 0.9719581}
+  m_LocalPosition: {x: 148.08499, y: 29.02724, z: 176.7483}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539955069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539955067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u0422\u0435\u043F\u0435\u0440\u044C \u0432\u043D\u0438\u0437: \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438 \u0432\u043D\u0438\u0437 \u0438\u043B\u0438 \u043E\u043F\u0443\u0441\u0442\u0438 \u043F\u0440\u0430\u0432\u044B\u0439 \u0441\u0442\u0438\u043A"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
+--- !u!1 &580667482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580667483}
+  - component: {fileID: 580667484}
+  m_Layer: 0
+  m_Name: Ring 10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580667483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580667482}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.039358754, y: -0.22475323, z: 0.009086078, w: 0.97357816}
+  m_LocalPosition: {x: 128.85646, y: 22.535099, z: 284.6006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580667484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580667482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0435 \u043A\u043E\u043B\u044C\u0446\u043E!"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
 --- !u!1 &673733157
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,11 +1174,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &837056037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837056038}
+  - component: {fileID: 837056039}
+  m_Layer: 0
+  m_Name: "Level 1 \xB7 \u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837056038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837056037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1721456564}
+  - {fileID: 1966636285}
+  - {fileID: 521047565}
+  - {fileID: 1191314753}
+  - {fileID: 1213955454}
+  - {fileID: 1613843901}
+  - {fileID: 539955068}
+  - {fileID: 1512750978}
+  - {fileID: 293021354}
+  - {fileID: 580667483}
+  m_Father: {fileID: 983043309}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837056039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837056037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6728ddb64f464c938b080162c4b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  title: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
+  mountHint: "\u041F\u043E\u0434\u043E\u0439\u0434\u0438 \u043A \u043C\u0435\u0442\u043B\u0435 \u0438 \u0432\u043E\u0437\u044C\u043C\u0438 \u0435\u0451 \u043E\u0431\u0435\u0438\u043C\u0438 \u0440\u0443\u043A\u0430\u043C\u0438"
+  remountHint: "\u0412\u043E\u0437\u044C\u043C\u0438 \u043C\u0435\u0442\u043B\u0443 \u043E\u0431\u0435\u0438\u043C\u0438 \u0440\u0443\u043A\u0430\u043C\u0438, \u0447\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+  defaultHint: "\u041B\u0435\u0442\u0438 \u043A \u0441\u0432\u0435\u0442\u044F\u0449\u0435\u043C\u0443\u0441\u044F \u043A\u043E\u043B\u044C\u0446\u0443"
+  finishedInAirHint: "\u041F\u0440\u043E\u0439\u0434\u0435\u043D\u043E \u0437\u0430 {0}!\n\u041D\u0430\u0436\u043C\u0438 A, \u0447\u0442\u043E\u0431\u044B \u043F\u0440\u0438\u0437\u0435\u043C\u043B\u0438\u0442\u044C\u0441\u044F"
+  finishedHint: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C \u043F\u0440\u043E\u0439\u0434\u0435\u043D! \u0412\u0440\u0435\u043C\u044F: {0}"
 --- !u!4 &896233790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d5aa88d6537a3401d82fb7dcaac6a358, type: 3}
   m_PrefabInstance: {fileID: 206201511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &983043307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983043309}
+  - component: {fileID: 983043308}
+  m_Layer: 0
+  m_Name: Levels
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &983043308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983043307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9fb2a2a0ae4cc7858a62f503c4d78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  startLevel: 0
+  broom: {fileID: 786579303}
+  head: {fileID: 1470330734}
+  resultShowTime: 10
+--- !u!4 &983043309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983043307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 837056038}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045679745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1401,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1191314752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1191314753}
+  - component: {fileID: 1191314754}
+  m_Layer: 0
+  m_Name: Ring 04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1191314753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191314752}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.07895291, y: 0.47524205, z: 0.042869434, w: 0.87525636}
+  m_LocalPosition: {x: 52.697975, y: 24.155472, z: 118.81604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1191314754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191314752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u041A\u043E\u043B\u044C\u0446\u0430 \u043F\u043E\u0434\u043D\u0438\u043C\u0430\u044E\u0442\u0441\u044F: \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438 \u0432\u0432\u0435\u0440\u0445 \u0438\u043B\u0438 \u0442\u043E\u043B\u043A\u043D\u0438 \u043F\u0440\u0430\u0432\u044B\u0439 \u0441\u0442\u0438\u043A \u0432\u0432\u0435\u0440\u0445"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
+--- !u!1 &1213955453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213955454}
+  - component: {fileID: 1213955455}
+  m_Layer: 0
+  m_Name: Ring 05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1213955454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213955453}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04292932, y: 0.5512173, z: 0.028415205, w: 0.83277196}
+  m_LocalPosition: {x: 87.6776, y: 29.439402, z: 133.6628}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213955455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213955453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u041F\u0440\u0430\u0432\u044B\u0439 \u0441\u0442\u0438\u043A \u0432\u0432\u0435\u0440\u0445 \u0438 \u0432\u043D\u0438\u0437 \u043F\u043E\u0434\u043D\u0438\u043C\u0430\u0435\u0442 \u0438 \u043E\u043F\u0443\u0441\u043A\u0430\u0435\u0442 \u043C\u0435\u0442\u043B\u0443, \u043D\u0435 \u043C\u0435\u043D\u044F\u044F \u043A\u0443\u0440\u0441\u0430"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
 --- !u!1001 &1470330733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,6 +1782,56 @@ MonoBehaviour:
       m_Priority: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   animator: {fileID: 1504686826}
+--- !u!1 &1512750977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512750978}
+  - component: {fileID: 1512750979}
+  m_Layer: 0
+  m_Name: Ring 08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512750978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512750977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.02313054, y: -0.017433165, z: 0.00040340782, w: 0.9995804}
+  m_LocalPosition: {x: 155.98672, y: 27.751585, z: 213.91768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512750979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512750977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u041B\u0435\u0432\u044B\u0439 \u043A\u0443\u0440\u043E\u043A \u2014 \u0442\u043E\u0440\u043C\u043E\u0437. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439 \u0437\u0430\u0432\u0438\u0441\u043D\u0443\u0442\u044C \u043F\u0435\u0440\u0435\u0434 \u043A\u043E\u043B\u044C\u0446\u043E\u043C"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
 --- !u!1001 &1547493886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1636,6 +2095,56 @@ MonoBehaviour:
       m_Priority: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   animator: {fileID: 1602934512}
+--- !u!1 &1613843900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613843901}
+  - component: {fileID: 1613843902}
+  m_Layer: 0
+  m_Name: Ring 06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1613843901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613843900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.002469128, y: 0.45788518, z: -0.0012717302, w: 0.88900703}
+  m_LocalPosition: {x: 122.65721, y: 32.011936, z: 148.50955}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613843902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613843900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3
+  thickness: 0.2
+  hint: "\u041F\u0440\u0430\u0432\u044B\u0439 \u0441\u0442\u0438\u043A \u0432\u043B\u0435\u0432\u043E \u0438\u043B\u0438 \u0432\u043F\u0440\u0430\u0432\u043E \u2014 \u0431\u044B\u0441\u0442\u0440\u044B\u0439 \u043F\u043E\u0432\u043E\u0440\u043E\u0442 \u043D\u0430 45\xB0"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
 --- !u!1 &1623313370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +2176,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 219540831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721456563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721456564}
+  - component: {fileID: 1721456565}
+  m_Layer: 0
+  m_Name: Ring 01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1721456564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721456563}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.042414326, y: 0.061007943, z: 0.0025947923, w: 0.9972323}
+  m_LocalPosition: {x: 4.213145, y: 4, z: 20.745077}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1721456565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721456563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3.6
+  thickness: 0.2
+  hint: "\u041F\u0440\u0430\u0432\u044B\u0439 \u043A\u0443\u0440\u043E\u043A \u2014 \u0433\u0430\u0437. \u041B\u0435\u0442\u0438 \u043A \u0441\u0432\u0435\u0442\u044F\u0449\u0435\u043C\u0443\u0441\u044F \u043A\u043E\u043B\u044C\u0446\u0443"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
+--- !u!1 &1966636284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966636285}
+  - component: {fileID: 1966636286}
+  m_Layer: 0
+  m_Name: Ring 02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966636285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966636284}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.07728915, y: 0.138763, z: 0.010863434, w: 0.98724526}
+  m_LocalPosition: {x: 8.84528, y: 6.9426575, z: 58.461693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837056038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966636286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966636284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eed4a19692446ba81ffe9419970a4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlightRing
+  radius: 3.6
+  thickness: 0.2
+  hint: "\u041C\u0435\u0442\u043B\u0430 \u043B\u0435\u0442\u0438\u0442 \u0442\u0443\u0434\u0430, \u043A\u0443\u0434\u0430 \u0442\u044B \u0441\u043C\u043E\u0442\u0440\u0438\u0448\u044C"
+  nextColor: {r: 3.2, g: 2.2, b: 0.6, a: 1}
+  waitingColor: {r: 0.45, g: 0.36, b: 0.14, a: 1}
+  passedColor: {r: 1.2, g: 4, b: 0.8, a: 1}
 --- !u!1 &2140182910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,3 +2383,4 @@ SceneRoots:
   - {fileID: 1470330733}
   - {fileID: 1547493886}
   - {fileID: 673733159}
+  - {fileID: 983043309}

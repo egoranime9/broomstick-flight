@@ -511,7 +511,8 @@ public class BroomController : MonoBehaviour
         return v.normalized;
     }
 
-    private void Pulse(float amplitude, float duration)
+    /// <summary>Короткая вибрация обоих контроллеров.</summary>
+    public void Pulse(float amplitude, float duration)
     {
         if (_haptics == null) return;
         foreach (var h in _haptics)

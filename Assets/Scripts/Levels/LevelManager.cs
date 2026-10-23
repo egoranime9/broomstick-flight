@@ -11,10 +11,14 @@ using UnityEngine;
 /// </summary>
 public class LevelManager : MonoBehaviour
 {
+    public enum GuideStyle { Arrow3D, Persona }
+
     [Tooltip("С какого уровня начинать (0 — первый)")]
     [SerializeField] private int startLevel = 0;
     [SerializeField] private BroomController broom;
     [SerializeField] private Transform head;
+    [Tooltip("Как показывать следующую цель: золотая 3D-стрелка или указатель в стиле Persona")]
+    [SerializeField] private GuideStyle guide = GuideStyle.Arrow3D;
     [Tooltip("Через сколько секунд после приземления спрятать итог уровня")]
     [SerializeField] private float resultShowTime = 10f;
 
@@ -37,6 +41,7 @@ public class LevelManager : MonoBehaviour
     float _landedAt = -1f;
     HintPanel _hint;
     GuideArrow _arrow;
+    PersonaGuide _persona;
 
     void Awake() => Instance = this;
 
@@ -47,7 +52,8 @@ public class LevelManager : MonoBehaviour
 
         GetComponentsInChildren(true, _levels);
         _hint = HintPanel.Create(transform, head);
-        _arrow = GuideArrow.Create(transform, head);
+        if (guide == GuideStyle.Persona) _persona = PersonaGuide.Create(transform, head);
+        else _arrow = GuideArrow.Create(transform, head);
 
         if (_levels.Count == 0) Debug.LogWarning("[Levels] Нет ни одного уровня — запусти Broom → Setup Levels.");
         else StartLevel(startLevel);
@@ -114,6 +120,8 @@ public class LevelManager : MonoBehaviour
         string body;
         bool visible = !paused;
         Vector3? target = null;
+        string targetLabel = "";
+        float markerLift = 1f;
 
         if (level.IsFinished)
         {
@@ -134,15 +142,23 @@ public class LevelManager : MonoBehaviour
         {
             body = level.PassedCount == 0 && !level.TimerRunning ? level.MountHint : level.RemountHint;
             if (broom != null) target = broom.transform.position;
+            targetLabel = "BROOM";
+            markerLift = 0.7f;
         }
         else
         {
             var ring = level.NextRing;
             body = ring != null && !string.IsNullOrEmpty(ring.Hint) ? ring.Hint : level.DefaultHint;
-            if (ring != null) target = ring.transform.position;
+            if (ring != null)
+            {
+                target = ring.transform.position;
+                targetLabel = $"NEXT {level.PassedCount + 1}/{level.Rings.Count}";
+                markerLift = ring.WorldRadius + 1.5f;
+            }
         }
 
         _hint.Show(title, body, visible);
-        _arrow.SetTarget(paused ? null : target);
+        if (_arrow != null) _arrow.SetTarget(paused ? null : target);
+        if (_persona != null) _persona.SetTarget(paused ? null : target, targetLabel, markerLift);
     }
 }

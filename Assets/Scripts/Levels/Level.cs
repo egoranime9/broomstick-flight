@@ -5,10 +5,13 @@ using UnityEngine;
 /// Один уровень. Это пустой объект, в котором лежат все объекты уровня:
 /// кольца (FlightRing) в порядке пролёта — сверху вниз по иерархии, — а в будущих уровнях препятствия, снитч и т. д.
 /// Включён только объект текущего уровня, этим занимается LevelManager.
+/// Если заполнить список «Порядок пролёта», кольца проходятся в его порядке, а не по иерархии.
 /// </summary>
 public class Level : MonoBehaviour
 {
     [SerializeField] private string title = "Обучение";
+    [Tooltip("Порядок пролёта колец. Пусто — по порядку в иерархии")]
+    [SerializeField] private List<FlightRing> order = new List<FlightRing>();
 
     [Header("Подсказки")]
     [TextArea(1, 3)] [SerializeField] private string mountHint = "Подойди к метле и возьми её обеими руками";
@@ -39,7 +42,9 @@ public class Level : MonoBehaviour
     public void Begin()
     {
         _rings.Clear();
-        GetComponentsInChildren(true, _rings);
+        foreach (var ring in order)
+            if (ring != null && !_rings.Contains(ring)) _rings.Add(ring);
+        if (_rings.Count == 0) GetComponentsInChildren(true, _rings);
         PassedCount = 0;
         Elapsed = 0f;
         TimerRunning = false;

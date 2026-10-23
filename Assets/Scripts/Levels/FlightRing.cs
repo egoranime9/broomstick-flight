@@ -8,6 +8,8 @@ using UnityEngine.Rendering;
 ///
 /// Состояния: Waiting — тусклое, ждёт очереди; Next — следующее, ярко пульсирует и светит;
 /// Passed — пройдено: вспыхивает зелёным, разлетается и гаснет.
+///
+/// Если задать длину шеста, кольцо стоит на шесте до земли (как кольца для квиддича).
 /// </summary>
 [DisallowMultipleComponent]
 public class FlightRing : MonoBehaviour
@@ -20,6 +22,12 @@ public class FlightRing : MonoBehaviour
     [SerializeField] private float thickness = 0.2f;
     [Tooltip("Подсказка, пока это кольцо — следующее. Пусто — общая подсказка уровня")]
     [TextArea(1, 3)] [SerializeField] private string hint;
+
+    [Header("Шест (0 — кольцо висит в воздухе)")]
+    [Tooltip("Длина шеста от низа кольца до земли, м")]
+    [SerializeField] private float poleLength = 0f;
+    [SerializeField] private float poleRadius = 0.12f;
+    [SerializeField] private Color poleColor = new Color(0.42f, 0.32f, 0.14f);
 
     [Header("Цвета (HDR: ярче 1 — светится через Bloom)")]
     [ColorUsage(false, true)] [SerializeField] private Color nextColor = new Color(3.2f, 2.2f, 0.6f);
@@ -127,6 +135,8 @@ public class FlightRing : MonoBehaviour
         renderer.shadowCastingMode = ShadowCastingMode.Off;
         renderer.receiveShadows = false;
 
+        if (poleLength > 0.01f) BuildPole();
+
         var lightGo = new GameObject("Ring Light");
         lightGo.transform.SetParent(transform, false);
         _light = lightGo.AddComponent<Light>();
@@ -143,6 +153,24 @@ public class FlightRing : MonoBehaviour
         _audio.maxDistance = 300f;
 
         Apply();
+    }
+
+    void BuildPole()
+    {
+        var pole = GameObject.CreatePrimitive(PrimitiveType.Cylinder);      // высота 2, радиус 0.5
+        pole.name = "Pole";
+        Destroy(pole.GetComponent<Collider>());
+        pole.transform.SetParent(transform, false);
+        pole.transform.localPosition = new Vector3(0f, -radius - poleLength * 0.5f, 0f);
+        pole.transform.localScale = new Vector3(poleRadius * 2f, poleLength * 0.5f, poleRadius * 2f);
+
+        var material = new Material(Shader.Find("Universal Render Pipeline/Lit")) { name = "RingPole" };
+        material.SetColor(BaseColorId, poleColor);
+        material.SetFloat("_Metallic", 0.7f);
+        material.SetFloat("_Smoothness", 0.55f);
+        var renderer = pole.GetComponent<MeshRenderer>();
+        renderer.sharedMaterial = material;
+        renderer.shadowCastingMode = ShadowCastingMode.On;
     }
 
     static Mesh BuildTorus(float majorRadius, float minorRadius, int segments, int sides)
@@ -211,5 +239,10 @@ public class FlightRing : MonoBehaviour
             previous = p;
         }
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * radius);
+        if (poleLength > 0.01f)
+        {
+            Vector3 bottom = transform.TransformPoint(new Vector3(0f, -radius, 0f));
+            Gizmos.DrawLine(bottom, bottom - transform.up * poleLength);
+        }
     }
 }
